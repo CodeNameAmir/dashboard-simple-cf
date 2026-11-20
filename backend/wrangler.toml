@@ -1,0 +1,26 @@
+name = "dashboard-simple-cf"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+JWT_SECRET = "your-jwt-secret-here-change-in-production"
+BCRYPT_ROUNDS = "10"
+ALLOWED_ORIGINS = "https://your-frontend-domain.pages.dev,http://localhost:3000,http://localhost:3001"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "codenameamir-dashboard"
+database_id = "9f9015c9-aca1-44f7-b4dd-03f88bf830c2"
+
+[env.development]
+[[env.development.d1_databases]]
+binding = "DB"
+database_name = "codenameamir-dashboard"
+database_id = "9f9015c9-aca1-44f7-b4dd-03f88bf830c2"
+
+[env.production]
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "codenameamir-dashboard"
+database_id = "9f9015c9-aca1-44f7-b4dd-03f88bf830c2" 
