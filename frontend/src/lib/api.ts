@@ -34,7 +34,7 @@ async function request<T>(
   return data;
 }
 
-// Auth API
+// Auth API 
 export const authAPI = {
   register: async (email: string, password: string, name: string, invitationCode: string): Promise<AuthResponse> => {
     return request('/auth/register', {
